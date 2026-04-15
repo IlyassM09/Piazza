@@ -1,4 +1,4 @@
-Piazza API
+##Piazza API##
 Piazza is a Node.js and Express backend API for a discussion platform.
 
 It allows users to:
@@ -11,10 +11,10 @@ view expired messages
 interact with messages by liking, disliking, or commenting
 The app runs locally on port 80.
 
-Base URL
+## Base URL
 http://localhost
 
-Endpoints
+## Endpoints
 Users
 POST /api/users/registration
 Register a new user
@@ -41,7 +41,9 @@ Get expired messages for a topic
 Interactions
 POST /api/interactions/:messageId
 Interact with a message by liking, disliking, or commenting
-Authentication
+
+
+## Authentication
 Most message and interaction routes are protected.
 
 To use them:
@@ -49,14 +51,16 @@ To use them:
 Log in with POST /api/users/login
 Copy the token returned
 Add it to your request headers as auth-token: your_token_here
-Accepted Topics
+
+## Accepted Topics
 Messages must use one of these topics:
 
 Tech
 Politics
 Health
 Sport
-How to Run
+
+## How to Run
 1. Install dependencies
 Run npm install
 
@@ -78,7 +82,7 @@ http://localhost/api/messages/Politics/mostactive
 http://localhost/api/messages/Health/expired
 You can test the API using Postman, Insomnia, or curl.
 
-Example Usage Flow
+## Example Usage Flow
 Register a user with POST /api/users/registration
 Log in with POST /api/users/login
 Copy the returned auth-token
