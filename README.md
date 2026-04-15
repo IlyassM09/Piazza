@@ -67,8 +67,8 @@ Run npm install
 2. Create a .env file
 Add the required environment variables:
 
-TOKEN_SECRET=your_token_secret
-MONGO_URI=your_database_connection_string
+`TOKEN_SECRET=your_token_secret`<br>
+`MONGO_URI=your_database_connection_string`<br>
 
 3. Start the app
 Run node app.js
