@@ -1,0 +1,7 @@
+.env
+commands.md
+notes/
+notes.md
+node_modules/
+.idea/
+node_modules
