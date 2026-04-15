@@ -76,10 +76,11 @@ Run node app.js
 4. Test on port 80
 Example URLs:
 
-http://localhost/api/users
-http://localhost/api/messages/Tech
-http://localhost/api/messages/Politics/mostactive
-http://localhost/api/messages/Health/expired
+`http://localhost/api/users`
+`http://localhost/api/messages/Tech`
+`http://localhost/api/messages/Politics/mostactive`
+`http://localhost/api/messages/Health/expired`
+
 You can test the API using Postman, Insomnia, or curl.
 
 ## Example Usage Flow
