@@ -84,14 +84,14 @@ Example URLs:
 You can test the API using Postman, Insomnia, or curl.
 
 ## Example Usage Flow
-Register a user with POST /api/users/registration
-Log in with POST /api/users/login
-Copy the returned auth-token
-Use that token to access protected routes
-Create messages and interact with them
-Notes
-Message routes require authentication
-Interaction routes require authentication
-Users cannot like or dislike their own message
-Users cannot interact with expired messages
-A single interaction cannot both like and dislike the same message
+Register a user with POST /api/users/registration <br>
+Log in with POST /api/users/login <br>
+Copy the returned auth-token <br>
+Use that token to access protected routes <br>
+Create messages and interact with them <br>
+Notes <br>
+Message routes require authentication <br>
+Interaction routes require authentication <br>
+Users cannot like or dislike their own message <br>
+Users cannot interact with expired messages <br>
+A single interaction cannot both like and dislike the same message <br>
