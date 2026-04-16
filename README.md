@@ -95,3 +95,6 @@ Interaction routes require authentication <br>
 Users cannot like or dislike their own message <br>
 Users cannot interact with expired messages <br>
 A single interaction cannot both like and dislike the same message <br>
+
+## Credit 
+This project was implemented as part of the Cloud Computing module ran by Stelios Sotiriadis at Birkbeck university. 
