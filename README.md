@@ -89,7 +89,7 @@ Log in with POST /api/users/login <br>
 Copy the returned auth-token <br>
 Use that token to access protected routes <br>
 Create messages and interact with them <br>
-Notes <br>
+## Notes
 Message routes require authentication <br>
 Interaction routes require authentication <br>
 Users cannot like or dislike their own message <br>
