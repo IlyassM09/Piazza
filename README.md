@@ -23,7 +23,7 @@ POST /api/users/login
 Log in and receive an auth token
 
 GET /api/users
-Get all users
+Get all users for admin role only. 
 
 Messages
 POST /api/messages
@@ -44,13 +44,15 @@ Interact with a message by liking, disliking, or commenting
 
 
 ## Authentication
-Most message and interaction routes are protected.
+Most message and interaction routes are protected:<br>
+authenticated routes use token verification.<br>
+admin-only routes use role-based authorization.<br>
 
-To use them:
+To use them:<br>
 
-Log in with POST /api/users/login
-Copy the token returned
-Add it to your request headers as auth-token: your_token_here
+Log in with POST /api/users/login<br>
+Copy the token returned<br>
+Add it to your request headers as auth-token: your_token_here<br>
 
 ## Accepted Topics
 Messages must use one of these topics:
