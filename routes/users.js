@@ -96,7 +96,7 @@ router.post("/login", async (req, res) => {
 
 router.get("/", verify, isAdmin, async (req, res) => {
   try {
-    const users = await User.find().select("-password");
+    const users = await User.find().select("username email role");
     res.send(users);
   } catch (error) {
     res
