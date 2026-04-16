@@ -62,13 +62,13 @@ router.post('/login',async(req,res)=>{
     }
 
     // check the password is correct 
-    const passwordCorrect = bcrypt.compare(req.body.password,user.password)
+    const passwordCorrect = await bcrypt.compare(req.body.password,user.password)
     if(!passwordCorrect){
         return res.status(400).send({message : 'password incorrect'})
     }
 
     // generate token
-    const token = jsonwebtoken.sign({_id:user._id},process.env.TOKEN_SECRET)
+    const token = jsonwebtoken.sign({_id:user._id},process.env.TOKEN_SECRET,{ expiresIn:"1h"})
     res.header('auth-token',token).send({'auth-token':token})
 })
 
