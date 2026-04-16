@@ -20,6 +20,7 @@ const userSchema = mongoose.Schema(
       required: true,
       max: 1024,
       min: 6,
+      select: false,
     },
     role: {
       type: String,

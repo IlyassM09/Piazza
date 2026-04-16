@@ -47,7 +47,15 @@ router.post("/registration", async (req, res) => {
 
   try {
     const userToSave = await user.save();
-    res.send(userToSave);
+    res.status(201).send({
+      message: "User registered successfully",
+      user: {
+        _id: userToSave._id,
+        username: userToSave.username,
+        email: userToSave.email,
+        role: userToSave.role,
+      },
+    });
   } catch (error) {
     res.status(400).send({ error: " Couldn't save the user" });
   }
@@ -62,7 +70,9 @@ router.post("/login", async (req, res) => {
   }
 
   // check the email exists
-  const user = await User.findOne({ email: req.body.email });
+  const user = await User.findOne({ email: req.body.email }).select(
+    "+password",
+  );
   if (!user) {
     return res.status(400).send({ message: "email is not registered" });
   }
@@ -85,7 +95,7 @@ router.post("/login", async (req, res) => {
 
 router.get("/", verify, isAdmin, async (req, res) => {
   try {
-    const users = await User.find();
+    const users = await User.find().select("-password");
     res.send(users);
   } catch (error) {
     res
